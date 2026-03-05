@@ -39,7 +39,7 @@ export default function handler(req, res) {
             required: false,
           },
         ],
-        endpoint: "/api/tools/generate-utm-links",
+        endpoint: "/tools/generate-utm-links",
         http_method: "POST",
         auth_requirements: [],
       },
