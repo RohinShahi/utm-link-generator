@@ -2,7 +2,7 @@ export default function handler(req, res) {
   res.status(200).json({
     functions: [
       {
-        name: "generate_utm_links",
+        name: "generate_campaign_utm_links",
         description:
           "Generates UTM-tagged tracking URLs for each marketing channel in a campaign. " +
           "Use this after campaign strategy is created to produce ready-to-use tracking links " +
