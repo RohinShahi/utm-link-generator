@@ -43,7 +43,13 @@ export default function handler(req, res) {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { base_url, campaign_name, channels, campaign_content } = req.body ?? {};
+  // Log raw body to diagnose how Opal sends parameters
+  console.log("RAW BODY:", JSON.stringify(req.body));
+
+  // Opal may wrap parameters under a 'parameters' key
+  const body = req.body ?? {};
+  const params = body.parameters ?? body;
+  const { base_url, campaign_name, channels, campaign_content } = params;
 
   // Validate required inputs
   if (!base_url || typeof base_url !== "string") {
