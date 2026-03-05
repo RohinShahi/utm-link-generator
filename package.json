@@ -1,0 +1,9 @@
+{
+  "name": "opal-utm-tool",
+  "version": "1.0.0",
+  "description": "Custom Opal tool: UTM campaign link generator for marketing campaign workflows",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  }
+}
