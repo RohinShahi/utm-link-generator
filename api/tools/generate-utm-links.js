@@ -53,7 +53,7 @@ export default function handler(req, res) {
 
   // Validate required inputs
   if (!base_url || typeof base_url !== "string") {
-    return res.status(400).json({ error: "base_url is required and must be a string." });
+    return res.status(400).json({ error: "base_url is required and must be a string.", debug_received: params });
   }
   if (!campaign_name || typeof campaign_name !== "string") {
     return res.status(400).json({ error: "campaign_name is required and must be a string." });
